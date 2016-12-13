@@ -17,14 +17,20 @@
   </head>
   <body ng-app="bugcenterApp">
     <div ng-controller="jgr">
+      <input type="text" ng-model="abc.name"><input type="text" ng-model="abc.co">
+      <div ng-click="add()">+</div>
+
+      <div ng-repeat="x in data">{{x.id}} {{x.name}} |{{x.co}} <button ng-click="del(x,$index)">x</button>
+      </div>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-  <div ui-sref='jgr'>123</div>
-  <div ui-view></div>
+  
+  <!--
   <autoplay jgr="data" jgr2="asd"></autoplay>
+<autoplay jgr="data2" jgr2="qwe"></autoplay>-->
 
  
 </div>
@@ -45,6 +51,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/jgr.js"></script>
+    <script src="scripts/jgr.js"></script>
         <!-- endbuild -->
 </body>
 </html>
